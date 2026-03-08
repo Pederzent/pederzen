@@ -34,7 +34,7 @@ body{
     margin:0;
 }
 
-/* HEADER IMAGE */
+/* HEADER */
 
 .header{
     position:relative;
@@ -62,12 +62,9 @@ body{
     padding:10px 15px;
     cursor:pointer;
     border-radius:6px;
-
     background:rgba(0,0,0,0.5);
     backdrop-filter:blur(6px);
 }
-
-/* SIDE MENU */
 
 .side-menu{
     position:absolute;
@@ -112,7 +109,7 @@ body{
     border-radius:8px;
 }
 
-/* TEXT SECTION */
+/* TEXT */
 
 .text-section{
     max-width:800px;
@@ -120,6 +117,21 @@ body{
     padding:40px;
     font-size:18px;
     line-height:1.6;
+}
+
+/* HIDDEN PAGE SECTIONS */
+
+.page-section{
+    display:none;
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+}
+
+/* Show section when targeted */
+
+.page-section:target{
+    display:block;
 }
 
 </style>
@@ -130,7 +142,7 @@ body{
 <!-- BANNER -->
 
 <div class="banner">
-<img src="avatar.png" alt="Logo">
+<img src="avatar.png">
 <h1>Welcome</h1>
 </div>
 
@@ -138,54 +150,113 @@ body{
 
 <div class="header">
 
-<img src="avatar.png" alt="Header image">
+<img src="avatar.png">
 
 <div class="menu-container">
 
 <div class="menu-button">☰</div>
 
 <div class="side-menu">
-<a href="#">Home</a>
-<a href="#">Projects</a>
-<a href="#">Photos</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
+<a href="#home">Home</a>
+<a href="#projects">Projects</a>
+<a href="#photos">Photos</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 </div>
 
 </div>
-
 </div>
 
-<!-- IMAGE SECTION -->
+
+<!-- HOME SECTION -->
+
+<div id="home" class="page-section">
 
 <div class="image-row">
 
 <div class="image-box">
-<img src="image1.jpg">
+<img src="guinness_img.png">
 <p>Caption for the first image.</p>
 </div>
 
 <div class="image-box">
-<img src="image2.jpg">
+<img src="sun_trees.png">
 <p>Caption for the second image.</p>
 </div>
 
 <div class="image-box">
-<img src="image3.jpg">
+<img src="sun_trees.png">
 <p>Caption for the third image.</p>
 </div>
 
 </div>
 
-<!-- TEXT SECTION -->
-
 <div class="text-section">
 <p>
-This is where your paragraph text goes. You can describe yourself,
-your work, your interests, or what visitors will find on your site.
-Because the text area has a limited width, it remains easy to read
-even on large screens.
+This is the home section. It becomes visible when the Home link is clicked.
+You can place your introduction here.
 </p>
+</div>
+
+</div>
+
+
+<!-- PROJECTS SECTION -->
+
+<div id="projects" class="page-section">
+
+<h2>Projects</h2>
+
+<p>
+Example project list:
+</p>
+
+<ul>
+<li>Project A – description</li>
+<li>Project B – description</li>
+<li>Project C – description</li>
+</ul>
+
+</div>
+
+
+<!-- PHOTOS SECTION -->
+
+<div id="photos" class="page-section">
+
+<h2>Photos</h2>
+
+<p>Example gallery area.</p>
+
+<img src="guinness_img.png" width="300">
+<img src="sun_trees.png" width="300">
+
+</div>
+
+
+<!-- ABOUT SECTION -->
+
+<div id="about" class="page-section">
+
+<h2>About Me</h2>
+
+<p>
+This section could describe who you are, your interests,
+and what the website is about.
+</p>
+
+</div>
+
+
+<!-- CONTACT SECTION -->
+
+<div id="contact" class="page-section">
+
+<h2>Contact</h2>
+
+<p>Email: your@email.com</p>
+<p>GitHub: yourusername</p>
+
 </div>
 
 </body>
